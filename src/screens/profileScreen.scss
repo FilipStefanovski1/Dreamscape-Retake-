@@ -1,0 +1,117 @@
+.profile-page {
+  min-height: 100vh;
+  background: #0a0f24;
+  color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  /* keep content above the bottom tab bar */
+  padding: 16px;
+  padding-bottom: 96px;
+}
+
+/* content wrapper for nice max-width */
+.profile-page .content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.title {
+  margin: 0 0 2px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+.subtitle {
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* Challenge cards */
+.challenge-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #131735;
+  border-radius: 16px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+.cc { display: block; }
+.cc-track {
+  fill: none;
+  stroke: rgba(255,255,255,0.15);
+  stroke-width: 8;
+}
+.cc-progress {
+  fill: none;
+  stroke: #ffd30a;         /* yellow ring */
+  stroke-linecap: round;
+  stroke-width: 8;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1.2s ease;
+}
+
+.challenge-text .pct {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.challenge-text .label {
+  font-size: 14px;
+  line-height: 1.35;
+  opacity: 0.95;
+}
+
+/* Settings */
+.settings-card {
+  background: #131735;
+  border-radius: 16px;
+  padding: 12px;
+  margin-top: 16px;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.row:last-child { border-bottom: 0; }
+
+.logout {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* Small tweaks for narrow screens */
+@media (max-width: 360px) {
+  .avatar { width: 64px; height: 64px; }
+  .title { font-size: 20px; }
+}
