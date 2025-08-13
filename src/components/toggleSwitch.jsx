@@ -5,7 +5,7 @@ const ToggleSwitch = () => {
   const toggle = () => setIsOn(!isOn);
 
   return (
-    <div 
+    <div
       onClick={toggle}
       className={`w-12 h-6 flex items-center rounded-full cursor-pointer p-1 transition-colors duration-300 ${
         isOn ? 'bg-green-500' : 'bg-gray-400'
